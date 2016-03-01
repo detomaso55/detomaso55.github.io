@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tony Maszara</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+	var myCenter = new google.maps.LatLng(33.768333,-118.195556);
+	function initialize() {
+		var mapProp = {
+			center: myCenter,
+			zoom: 9,
+			scrollwheel: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		var marker = new google.maps.Marker({
+			position: myCenter,
+		});
+		
+		marker.setMap(map);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand smoothScroll" href="#Welcome">TONY MASZARA</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#About" class="smoothScroll">ABOUT</a></li>
+					<li><a href="#Showcase" class="smoothScroll">SHOWCASE</a></li>
+					<li><a href="#Contact" class="smoothScroll">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>			
+	</nav>
+	
+	<div class="container-fluid bg-1 text-center" id="Welcome">
+		<h2>Welcome!</h2>
+		<img src="images/linkedin.jpg" class="img-circle img-responsive" alt="Linkedin">
+		<h3>My name is Tony and this is my website.</h3>
+	</div>
+	
+	<div class="container-fluid bg-2 text-center" id="About">
+		<h2>About Me</h2>
+		<p>I am an IT Business Analyst and Graduate Student working on obtaining my Masters in Computer Information Systems from Boston University. I currently live in Los Angeles, but am originally from Detroit, MI.</p>
+		<p>I love web development and hope to do this full-time as a career in the near-future!</p>
+	</div>
+	
+	<div class="container-fluid bg-3 text-center" id="Showcase">
+		<h2>Showcase</h2>
+		<h3>Here is some of my work</h3>
+		<div class="row text-center">
+			<div class="col-sm-4">
+				<div class="hovereffect">
+					<img class="img-responsive" src="http://placehold.it/350x250" alt="">
+						<div class="overlay">
+							<h3>Placeholder 1</h3>
+								<p><a href="#">LINK HERE</a></p> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="hovereffect">
+					<img class="img-responsive" src="http://placehold.it/350x250" alt="">
+						<div class="overlay">
+							<h3>Placeholder 2</h3>
+								<p><a href="#">LINK HERE</a></p> 
+						</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="hovereffect">
+					<img class="img-responsive" src="http://placehold.it/350x250" alt="">
+						<div class="overlay">
+							<h3>Placeholder 2</h3>
+								<p><a href="#">LINK HERE</a></p> 
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid bg-4" id="Contact">
+		<h2 class="text-center">Contact</h2> <br>
+		<div class="row">
+			<div class="col-sm-5">
+				<p>Contact me and let me know what you think of the site or any of my other work.</p><br>
+				<p><span class="glyphicon glyphicon-map-marker"></span> Long Beach, CA</p>
+				<p><span class="glyphicon glyphicon-envelope"></span> tmaszara55@gmail.com</p>
+			</div>
+			<div class="col-sm-7">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+					</div>
+					<div class="col-sm-6 form-group">
+						<input class="form-control" id="email" name="email" placeholder="Email" type="text" required>
+					</div>
+				</div>
+				<textarea class="form-control" id="comments" name="comments" placeholder="Comments" rows="5"></textarea> <br>
+				<div class="row">
+					<div class="col-sm-12 form-group">
+						<button class="btn btn-default pull-right" type="submit">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="googleMap"></div>
+	
+	<footer class="container-fluid text-center">
+		<a href="#Welcome" class="smoothScroll">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>&copy; 2015, Tony Maszara, Long Beach, CA</p>
+	</footer>
+	
+</body>
+</html>
